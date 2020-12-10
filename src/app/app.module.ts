@@ -4,12 +4,16 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { OrganizerComponent } from './components/organizer/organizer.component';
 import { WithHeaderHocComponent } from './components/with-header-hoc/with-header-hoc.component';
+import { ListComponent } from './components/list/list.component';
+import { CompletedComponent } from './components/completed/completed.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OrganizerComponent,
     WithHeaderHocComponent,
+    OrganizerComponent,
+    ListComponent,
+    CompletedComponent,
   ],
   imports: [
     BrowserModule

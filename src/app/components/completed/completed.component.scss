@@ -1,0 +1,22 @@
+.list {
+  margin-bottom: 5px;
+
+  li {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ededed;
+    padding: 12px 16px;
+
+    p {
+      width: 100%;
+      margin-right: 10px;
+    }
+  }
+
+  .delete {
+    width: 20px;
+    border: 0;
+    margin-right: 5px;
+    background: url('/assets/icons/delete.svg') center no-repeat;
+  }
+}
