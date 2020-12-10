@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="100" height="100" x="0" y="0" viewBox="0 0 300 300" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+	<circle r="150" cx="150" cy="150" fill="#ffffff" shape="circle" transform="matrix(0.6,0,0,0.6,60,60)"/>
+	<g transform="matrix(0.7,0,0,0.7,45.00000278321096,45)">
+		<g xmlns="http://www.w3.org/2000/svg">
+			<g>
+				<g>
+					<polygon points="121.631,143.635 107.992,155.633 140.718,192.109 140.782,192.045 140.826,192.109 199.514,132.467      189.039,118.698 141.34,157.952    " fill="#4bc9cb" data-original="#000000" style="" class=""/>
+					<path d="M149.997,0C67.158,0,0.003,67.161,0.003,149.997S67.158,300,149.997,300s150-67.163,150-150.003S232.837,0,149.997,0z      M150,232.886c-77.185,0-82.683-130.592-82.683-130.592l82.681-35.187H150l82.681,35.187     C232.681,102.294,227.183,232.886,150,232.886z" fill="#4bc9cb" data-original="#000000" style="" class=""/>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
