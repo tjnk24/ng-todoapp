@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Todos } from 'src/app/types';
+import { DataService } from 'src/app/shared/data.service';
+import { Todo } from 'src/app/types';
 
 @Component({
   selector: 'app-organizer',
@@ -8,9 +9,9 @@ import { Todos } from 'src/app/types';
   styleUrls: ['./organizer.component.scss']
 })
 export class OrganizerComponent implements OnInit {
-  @Input() todos: Todos;
-
   form: FormGroup;
+
+  constructor(public dataService: DataService) {}
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -21,10 +22,11 @@ export class OrganizerComponent implements OnInit {
   submit() {
     const { todoText } = this.form.value;
 
-    this.todos.current.push({
-      id: this.todos.current.length + 1,
-      text: todoText,
-    });
+    this.dataService.add({
+        id: this.dataService.todos.value.length + 1,
+        text: todoText,
+        completed: false,
+      })
 
     this.form.reset();
   }

@@ -2,10 +2,13 @@
   icon="shield"
   title="COMPLETED"
 >
-  <ul class="list" *ngIf="todos.length; else noItems">
-    <li *ngFor="let item of todos">
-      <p>{{ item.text }}</p>
-      <button class="delete"></button>
+  <ul class="list" *ngIf="completedTodos.length; else noItems">
+    <li *ngFor="let todo of completedTodos">
+      <p>{{ todo.text }}</p>
+      <button
+        class="delete"
+        (click)="remove(todo.id)"
+      ></button>
     </li>
   </ul>
 </app-header-hoc>

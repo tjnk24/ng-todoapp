@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { TodoItem } from 'src/app/types';
+import { DataService } from 'src/app/shared/data.service';
+import { Todo } from 'src/app/types';
 
 @Component({
   selector: 'app-item',
@@ -8,14 +9,16 @@ import { TodoItem } from 'src/app/types';
   styleUrls: ['./item.component.scss']
 })
 export class ItemComponent implements OnInit {
-  @Input() todos: TodoItem[];
-  @Input() todoItem: TodoItem = {
-    text: '',
+  @Input() todoItem: Todo = {
     id: null,
+    text: '',
+    completed: false,
   };
 
   form: FormGroup;
   isEditing: boolean = false;
+
+  constructor(public dataService: DataService) {}
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -33,17 +36,10 @@ export class ItemComponent implements OnInit {
   }
 
   remove() {
-    const filteredArray = this.todos.filter((todo) => todo.id !== this.todoItem.id);
-
-    this.todos.splice(filteredArray.length - 1, 1);
-
-    filteredArray.forEach((item, index) => {
-      this.todos[index] = item;
-    })
+    this.dataService.remove(this.todoItem.id);
   }
 
   complete() {
-    console.log('complete', this.todoItem.id);
-    // this.todoItem.completed = true;
+    this.dataService.setCompleted(this.todoItem.id);
   }
 }

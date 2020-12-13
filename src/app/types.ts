@@ -1,9 +1,5 @@
-export type TodoItem = {
+export type Todo = {
   id: number;
   text: string;
-}
-
-export type Todos = {
-  current: TodoItem[];
-  completed: TodoItem[];
+  completed: boolean;
 }
