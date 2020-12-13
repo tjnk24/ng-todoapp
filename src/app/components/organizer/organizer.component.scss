@@ -35,9 +35,17 @@ form {
     font-size: 34px;
     background-color: var(--purple-color);
     margin-right: 30px;
+    -webkit-box-shadow: 0px 5px 9px -5px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 5px 9px -5px rgba(0, 0, 0, 1);
+    box-shadow: 0px 5px 9px -5px rgba(0, 0, 0, 1);
 
     &:hover {
       background-color: var(--purple-color-hover);
+    }
+
+    &:disabled {
+      cursor: initial;
+      background-color: #ccc;
     }
   }
 }

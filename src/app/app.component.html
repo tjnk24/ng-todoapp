@@ -1,6 +1,6 @@
 <header>Todo App</header>
 <main>
-  <app-organizer></app-organizer>
-  <app-list></app-list>
-  <app-completed></app-completed>
+  <app-organizer [todos]="todos"></app-organizer>
+  <app-list [todos]="todos.current"></app-list>
+  <app-completed [todos]="todos.completed"></app-completed>
 </main>

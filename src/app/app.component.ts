@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Todos } from './types';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-todoapp';
+  todos: Todos = {
+    current: [
+      {
+        id: 0,
+        text: 'ffffffffffffffffffffffffffffdddd',
+      },
+      {
+        id: 1,
+        text: 'sdfsdfsdf',
+      },
+    ],
+    completed: [
+      {
+        id: 0,
+        text: 'sdfsdfsdffddddddddddddd',
+      },
+    ]
+  };
 }

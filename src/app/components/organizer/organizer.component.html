@@ -2,11 +2,23 @@
   icon="add-item"
   title="ADD ITEM"
 >
-  <form>
+  <form
+    (ngSubmit)="submit()"
+    [formGroup]="form"
+  >
     <div class="input-block">
       <span>What do you want to do?</span>
-      <input type="text">
+      <input
+        type="text"
+        formControlName="todoText"
+      />
     </div>
-    <button type="submit" class="light-shadow">+</button>
+    <button
+      type="submit"
+      class="light-shadow"
+      [disabled]="form.invalid"
+    >
+      +
+    </button>
   </form>
 </app-header-hoc>

@@ -2,18 +2,15 @@
   icon="list"
   title="TO-DO LIST"
 >
-  <ul class="list">
-    <li>
-      <span>✓</span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <button class="edit"></button>
-      <button class="delete"></button>
-    </li>
-    <li>
-      <span>✓</span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <button class="edit"></button>
-      <button class="delete"></button>
-    </li>
+  <ul class="list" *ngIf="todos.length; else noItems">
+    <app-item
+      *ngFor="let item of todos;"
+      [todoItem]="item"
+      [todos]="todos"
+    ></app-item>
   </ul>
 </app-header-hoc>
+
+<ng-template #noItems>
+  <app-empty-placeholder></app-empty-placeholder>
+</ng-template>

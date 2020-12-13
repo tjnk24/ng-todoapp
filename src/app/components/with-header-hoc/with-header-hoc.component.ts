@@ -6,8 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./with-header-hoc.component.scss']
 })
 export class WithHeaderHocComponent implements OnInit {
-  @Input() icon: string = '';
-  @Input() title: string = '';
+  @Input() icon: string;
+  @Input() title: string;
 
   svgUrl: string = '';
 

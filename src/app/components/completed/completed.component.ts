@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { TodoItem } from 'src/app/types';
 
 @Component({
   selector: 'app-completed',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./completed.component.scss']
 })
 export class CompletedComponent implements OnInit {
+  @Input() todos: TodoItem[];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    // this.todos = this.todos.completed.filter((todo) => todo.completed === true);
   }
-
 }

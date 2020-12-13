@@ -1,0 +1,31 @@
+<li>
+  <button
+    class="complete"
+    (click)="complete()"
+  >
+    ✓
+  </button>
+  <p *ngIf="!isEditing; else itemInput">
+    {{ todoItem.text }}
+  </p>
+  <button
+    class="edit"
+    (click)="editAndSubmit()"
+  ></button>
+  <button
+    class="delete"
+    (click)="remove()"
+  ></button>
+</li>
+
+<ng-template #itemInput>
+  <form
+    (ngSubmit)="editAndSubmit()"
+    [formGroup]="form"
+  >
+    <input
+      type="text"
+      formControlName="itemText"
+    />
+  </form>
+</ng-template>

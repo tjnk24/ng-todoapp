@@ -2,10 +2,14 @@
   icon="shield"
   title="COMPLETED"
 >
-  <ul class="list">
-    <li>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <ul class="list" *ngIf="todos.length; else noItems">
+    <li *ngFor="let item of todos">
+      <p>{{ item.text }}</p>
       <button class="delete"></button>
     </li>
   </ul>
 </app-header-hoc>
+
+<ng-template #noItems>
+  <app-empty-placeholder></app-empty-placeholder>
+</ng-template>
